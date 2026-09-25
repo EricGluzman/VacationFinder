@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VacationFinder.Core\VacationFinder.Core.csproj" />
+    <ProjectReference Include="..\VacationFinder.Infrastructure\VacationFinder.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
