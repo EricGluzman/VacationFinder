@@ -1,0 +1,351 @@
+[
+  {
+    "city": "Barcelona",
+    "country": "Spain",
+    "countryCode": "ES",
+    "continent": "Europe",
+    "lat": 41.39,
+    "lng": 2.17
+  },
+  {
+    "city": "Lisbon",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "continent": "Europe",
+    "lat": 38.72,
+    "lng": -9.14
+  },
+  {
+    "city": "Rome",
+    "country": "Italy",
+    "countryCode": "IT",
+    "continent": "Europe",
+    "lat": 41.90,
+    "lng": 12.50
+  },
+  {
+    "city": "Athens",
+    "country": "Greece",
+    "countryCode": "GR",
+    "continent": "Europe",
+    "lat": 37.98,
+    "lng": 23.73
+  },
+  {
+    "city": "Santorini",
+    "country": "Greece",
+    "countryCode": "GR",
+    "continent": "Europe",
+    "lat": 36.42,
+    "lng": 25.43
+  },
+  {
+    "city": "Paris",
+    "country": "France",
+    "countryCode": "FR",
+    "continent": "Europe",
+    "lat": 48.86,
+    "lng": 2.35
+  },
+  {
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "countryCode": "NL",
+    "continent": "Europe",
+    "lat": 52.37,
+    "lng": 4.90
+  },
+  {
+    "city": "Prague",
+    "country": "Czechia",
+    "countryCode": "CZ",
+    "continent": "Europe",
+    "lat": 50.08,
+    "lng": 14.44
+  },
+  {
+    "city": "Budapest",
+    "country": "Hungary",
+    "countryCode": "HU",
+    "continent": "Europe",
+    "lat": 47.50,
+    "lng": 19.04
+  },
+  {
+    "city": "Dubrovnik",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "continent": "Europe",
+    "lat": 42.65,
+    "lng": 18.09
+  },
+  {
+    "city": "Istanbul",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "continent": "Europe",
+    "lat": 41.01,
+    "lng": 28.98
+  },
+  {
+    "city": "Larnaca",
+    "country": "Cyprus",
+    "countryCode": "CY",
+    "continent": "Europe",
+    "lat": 34.92,
+    "lng": 33.63
+  },
+  {
+    "city": "Reykjavik",
+    "country": "Iceland",
+    "countryCode": "IS",
+    "continent": "Europe",
+    "lat": 64.15,
+    "lng": -21.94
+  },
+
+  {
+    "city": "Antalya",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "continent": "Asia",
+    "lat": 36.90,
+    "lng": 30.70
+  },
+  {
+    "city": "Batumi",
+    "country": "Georgia",
+    "countryCode": "GE",
+    "continent": "Asia",
+    "lat": 41.64,
+    "lng": 41.64
+  },
+  {
+    "city": "Tbilisi",
+    "country": "Georgia",
+    "countryCode": "GE",
+    "continent": "Asia",
+    "lat": 41.72,
+    "lng": 44.79
+  },
+  {
+    "city": "Eilat",
+    "country": "Israel",
+    "countryCode": "IL",
+    "continent": "Asia",
+    "lat": 29.56,
+    "lng": 34.95
+  },
+  {
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "countryCode": "AE",
+    "continent": "Asia",
+    "lat": 25.20,
+    "lng": 55.27
+  },
+  {
+    "city": "Bangkok",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "continent": "Asia",
+    "lat": 13.76,
+    "lng": 100.50
+  },
+  {
+    "city": "Phuket",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "continent": "Asia",
+    "lat": 7.88,
+    "lng": 98.39
+  },
+  {
+    "city": "Tokyo",
+    "country": "Japan",
+    "countryCode": "JP",
+    "continent": "Asia",
+    "lat": 35.68,
+    "lng": 139.69
+  },
+  {
+    "city": "Seoul",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "continent": "Asia",
+    "lat": 37.57,
+    "lng": 126.98
+  },
+  {
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "countryCode": "VN",
+    "continent": "Asia",
+    "lat": 21.03,
+    "lng": 105.85
+  },
+  {
+    "city": "Bali",
+    "country": "Indonesia",
+    "countryCode": "ID",
+    "continent": "Asia",
+    "lat": -8.65,
+    "lng": 115.22
+  },
+  {
+    "city": "Goa",
+    "country": "India",
+    "countryCode": "IN",
+    "continent": "Asia",
+    "lat": 15.50,
+    "lng": 73.83
+  },
+  {
+    "city": "Male",
+    "country": "Maldives",
+    "countryCode": "MV",
+    "continent": "Asia",
+    "lat": 4.18,
+    "lng": 73.51
+  },
+
+  {
+    "city": "Marrakech",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "continent": "Africa",
+    "lat": 31.63,
+    "lng": -7.99
+  },
+  {
+    "city": "Sharm El Sheikh",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "continent": "Africa",
+    "lat": 27.92,
+    "lng": 34.33
+  },
+  {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "continent": "Africa",
+    "lat": -33.92,
+    "lng": 18.42
+  },
+  {
+    "city": "Zanzibar",
+    "country": "Tanzania",
+    "countryCode": "TZ",
+    "continent": "Africa",
+    "lat": -6.16,
+    "lng": 39.19
+  },
+  {
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "countryCode": "MU",
+    "continent": "Africa",
+    "lat": -20.16,
+    "lng": 57.50
+  },
+
+  {
+    "city": "New York",
+    "country": "United States",
+    "countryCode": "US",
+    "continent": "North America",
+    "lat": 40.71,
+    "lng": -74.01
+  },
+  {
+    "city": "Miami",
+    "country": "United States",
+    "countryCode": "US",
+    "continent": "North America",
+    "lat": 25.76,
+    "lng": -80.19
+  },
+  {
+    "city": "Vancouver",
+    "country": "Canada",
+    "countryCode": "CA",
+    "continent": "North America",
+    "lat": 49.28,
+    "lng": -123.12
+  },
+  {
+    "city": "Cancun",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "continent": "North America",
+    "lat": 21.16,
+    "lng": -86.85
+  },
+  {
+    "city": "Punta Cana",
+    "country": "Dominican Republic",
+    "countryCode": "DO",
+    "continent": "North America",
+    "lat": 18.58,
+    "lng": -68.40
+  },
+
+  {
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "countryCode": "BR",
+    "continent": "South America",
+    "lat": -22.91,
+    "lng": -43.17
+  },
+  {
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "countryCode": "AR",
+    "continent": "South America",
+    "lat": -34.60,
+    "lng": -58.38
+  },
+  {
+    "city": "Cusco",
+    "country": "Peru",
+    "countryCode": "PE",
+    "continent": "South America",
+    "lat": -13.53,
+    "lng": -71.97
+  },
+  {
+    "city": "Cartagena",
+    "country": "Colombia",
+    "countryCode": "CO",
+    "continent": "South America",
+    "lat": 10.39,
+    "lng": -75.48
+  },
+
+  {
+    "city": "Sydney",
+    "country": "Australia",
+    "countryCode": "AU",
+    "continent": "Oceania",
+    "lat": -33.87,
+    "lng": 151.21
+  },
+  {
+    "city": "Auckland",
+    "country": "New Zealand",
+    "countryCode": "NZ",
+    "continent": "Oceania",
+    "lat": -36.85,
+    "lng": 174.76
+  },
+  {
+    "city": "Nadi",
+    "country": "Fiji",
+    "countryCode": "FJ",
+    "continent": "Oceania",
+    "lat": -17.80,
+    "lng": 177.42
+  }
+]
