@@ -17,4 +17,10 @@
     <ProjectReference Include="..\VacationFinder.Infrastructure\VacationFinder.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Data\destinations.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
