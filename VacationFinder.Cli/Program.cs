@@ -40,7 +40,7 @@ if (matches.Count == 0)
     return;
 }
 
-// Fixed example rates for the demo; update these manually.
+// Fixed example rates for the demo; update these manually
 // Each value is the number of currency units per 1 USD.
 decimal currencyRate = prefs.Currency switch
 {
