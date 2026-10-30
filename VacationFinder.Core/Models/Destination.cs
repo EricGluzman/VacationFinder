@@ -8,11 +8,16 @@
         public string Continent { get; }
         public double Latitude { get; }
         public double Longitude { get; }
-        public Destination(string cityName, string country,string countryCode, string continent, double latitude, double longitude)
+        public decimal FlightCostUsd { get; }
+        public decimal DailyCostUsd { get; }
+        public Destination(string cityName, string country,string countryCode, string continent, double latitude, double longitude, decimal flightCostUsd,
+    decimal dailyCostUsd)
         {
             ArgumentException.ThrowIfNullOrWhiteSpace(cityName);
             ArgumentException.ThrowIfNullOrWhiteSpace(country);
             ArgumentException.ThrowIfNullOrWhiteSpace(continent);
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(flightCostUsd);
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(dailyCostUsd);
 
             if (latitude < -90 || latitude > 90)
             {
@@ -28,13 +33,11 @@
             string cleanCode = countryCode.Trim().ToUpperInvariant();
             if (cleanCode.Length != 2) throw new ArgumentException("Country code must be 2 letters, like ES.", nameof(countryCode));
 
-            string? cleanCountry = string.IsNullOrWhiteSpace(country) ? null : country.Trim();
-            string? cleanContinent = string.IsNullOrWhiteSpace(continent) ? null : continent.Trim();
-            this.Country = cleanCountry;
-            this.Continent = cleanCountry is null ? cleanContinent : null; 
-            // if user choose to enter both, country and continent then the pref is on country.
-            // if both clean (null) then its gonna be around the world options, not tight on country or continent.
+            this.Country = country.Trim();
+            this.Continent = continent.Trim();
 
+            this.FlightCostUsd = flightCostUsd;
+            this.DailyCostUsd = dailyCostUsd;
             this.CityName = cityName;
             this.Latitude = latitude;
             this.Longitude = longitude;

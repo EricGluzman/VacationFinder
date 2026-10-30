@@ -5,7 +5,9 @@
     "countryCode": "ES",
     "continent": "Europe",
     "lat": 41.39,
-    "lng": 2.17
+    "lng": 2.17,
+    "flightCostUsd": 350,
+    "dailyCostUsd": 150
   },
   {
     "city": "Lisbon",
@@ -13,7 +15,9 @@
     "countryCode": "PT",
     "continent": "Europe",
     "lat": 38.72,
-    "lng": -9.14
+    "lng": -9.14,
+    "flightCostUsd": 450,
+    "dailyCostUsd": 130
   },
   {
     "city": "Rome",
@@ -21,7 +25,9 @@
     "countryCode": "IT",
     "continent": "Europe",
     "lat": 41.90,
-    "lng": 12.50
+    "lng": 12.50,
+    "flightCostUsd": 300,
+    "dailyCostUsd": 150
   },
   {
     "city": "Athens",
@@ -29,7 +35,9 @@
     "countryCode": "GR",
     "continent": "Europe",
     "lat": 37.98,
-    "lng": 23.73
+    "lng": 23.73,
+    "flightCostUsd": 200,
+    "dailyCostUsd": 120
   },
   {
     "city": "Santorini",
@@ -37,7 +45,9 @@
     "countryCode": "GR",
     "continent": "Europe",
     "lat": 36.42,
-    "lng": 25.43
+    "lng": 25.43,
+    "flightCostUsd": 300,
+    "dailyCostUsd": 180
   },
   {
     "city": "Paris",
@@ -45,7 +55,9 @@
     "countryCode": "FR",
     "continent": "Europe",
     "lat": 48.86,
-    "lng": 2.35
+    "lng": 2.35,
+    "flightCostUsd": 400,
+    "dailyCostUsd": 200
   },
   {
     "city": "Amsterdam",
@@ -53,7 +65,9 @@
     "countryCode": "NL",
     "continent": "Europe",
     "lat": 52.37,
-    "lng": 4.90
+    "lng": 4.90,
+    "flightCostUsd": 400,
+    "dailyCostUsd": 200
   },
   {
     "city": "Prague",
@@ -61,7 +75,9 @@
     "countryCode": "CZ",
     "continent": "Europe",
     "lat": 50.08,
-    "lng": 14.44
+    "lng": 14.44,
+    "flightCostUsd": 300,
+    "dailyCostUsd": 110
   },
   {
     "city": "Budapest",
@@ -69,7 +85,9 @@
     "countryCode": "HU",
     "continent": "Europe",
     "lat": 47.50,
-    "lng": 19.04
+    "lng": 19.04,
+    "flightCostUsd": 250,
+    "dailyCostUsd": 100
   },
   {
     "city": "Dubrovnik",
@@ -77,7 +95,9 @@
     "countryCode": "HR",
     "continent": "Europe",
     "lat": 42.65,
-    "lng": 18.09
+    "lng": 18.09,
+    "flightCostUsd": 350,
+    "dailyCostUsd": 150
   },
   {
     "city": "Istanbul",
@@ -85,7 +105,9 @@
     "countryCode": "TR",
     "continent": "Europe",
     "lat": 41.01,
-    "lng": 28.98
+    "lng": 28.98,
+    "flightCostUsd": 250,
+    "dailyCostUsd": 110
   },
   {
     "city": "Larnaca",
@@ -93,7 +115,9 @@
     "countryCode": "CY",
     "continent": "Europe",
     "lat": 34.92,
-    "lng": 33.63
+    "lng": 33.63,
+    "flightCostUsd": 150,
+    "dailyCostUsd": 120
   },
   {
     "city": "Reykjavik",
@@ -101,7 +125,9 @@
     "countryCode": "IS",
     "continent": "Europe",
     "lat": 64.15,
-    "lng": -21.94
+    "lng": -21.94,
+    "flightCostUsd": 700,
+    "dailyCostUsd": 250
   },
 
   {
@@ -110,7 +136,9 @@
     "countryCode": "TR",
     "continent": "Asia",
     "lat": 36.90,
-    "lng": 30.70
+    "lng": 30.70,
+    "flightCostUsd": 250,
+    "dailyCostUsd": 100
   },
   {
     "city": "Batumi",
@@ -118,7 +146,9 @@
     "countryCode": "GE",
     "continent": "Asia",
     "lat": 41.64,
-    "lng": 41.64
+    "lng": 41.64,
+    "flightCostUsd": 250,
+    "dailyCostUsd": 80
   },
   {
     "city": "Tbilisi",
@@ -126,7 +156,9 @@
     "countryCode": "GE",
     "continent": "Asia",
     "lat": 41.72,
-    "lng": 44.79
+    "lng": 44.79,
+    "flightCostUsd": 250,
+    "dailyCostUsd": 80
   },
   {
     "city": "Eilat",
@@ -134,7 +166,9 @@
     "countryCode": "IL",
     "continent": "Asia",
     "lat": 29.56,
-    "lng": 34.95
+    "lng": 34.95,
+    "flightCostUsd": 100,
+    "dailyCostUsd": 150
   },
   {
     "city": "Dubai",
@@ -142,7 +176,9 @@
     "countryCode": "AE",
     "continent": "Asia",
     "lat": 25.20,
-    "lng": 55.27
+    "lng": 55.27,
+    "flightCostUsd": 350,
+    "dailyCostUsd": 200
   },
   {
     "city": "Bangkok",
@@ -150,7 +186,9 @@
     "countryCode": "TH",
     "continent": "Asia",
     "lat": 13.76,
-    "lng": 100.50
+    "lng": 100.50,
+    "flightCostUsd": 700,
+    "dailyCostUsd": 80
   },
   {
     "city": "Phuket",
@@ -158,7 +196,9 @@
     "countryCode": "TH",
     "continent": "Asia",
     "lat": 7.88,
-    "lng": 98.39
+    "lng": 98.39,
+    "flightCostUsd": 800,
+    "dailyCostUsd": 90
   },
   {
     "city": "Tokyo",
@@ -166,7 +206,9 @@
     "countryCode": "JP",
     "continent": "Asia",
     "lat": 35.68,
-    "lng": 139.69
+    "lng": 139.69,
+    "flightCostUsd": 1100,
+    "dailyCostUsd": 180
   },
   {
     "city": "Seoul",
@@ -174,7 +216,9 @@
     "countryCode": "KR",
     "continent": "Asia",
     "lat": 37.57,
-    "lng": 126.98
+    "lng": 126.98,
+    "flightCostUsd": 1000,
+    "dailyCostUsd": 150
   },
   {
     "city": "Hanoi",
@@ -182,7 +226,9 @@
     "countryCode": "VN",
     "continent": "Asia",
     "lat": 21.03,
-    "lng": 105.85
+    "lng": 105.85,
+    "flightCostUsd": 800,
+    "dailyCostUsd": 70
   },
   {
     "city": "Bali",
@@ -190,7 +236,9 @@
     "countryCode": "ID",
     "continent": "Asia",
     "lat": -8.65,
-    "lng": 115.22
+    "lng": 115.22,
+    "flightCostUsd": 1000,
+    "dailyCostUsd": 90
   },
   {
     "city": "Goa",
@@ -198,7 +246,9 @@
     "countryCode": "IN",
     "continent": "Asia",
     "lat": 15.50,
-    "lng": 73.83
+    "lng": 73.83,
+    "flightCostUsd": 600,
+    "dailyCostUsd": 70
   },
   {
     "city": "Male",
@@ -206,7 +256,9 @@
     "countryCode": "MV",
     "continent": "Asia",
     "lat": 4.18,
-    "lng": 73.51
+    "lng": 73.51,
+    "flightCostUsd": 900,
+    "dailyCostUsd": 300
   },
 
   {
@@ -215,7 +267,9 @@
     "countryCode": "MA",
     "continent": "Africa",
     "lat": 31.63,
-    "lng": -7.99
+    "lng": -7.99,
+    "flightCostUsd": 500,
+    "dailyCostUsd": 90
   },
   {
     "city": "Sharm El Sheikh",
@@ -223,7 +277,9 @@
     "countryCode": "EG",
     "continent": "Africa",
     "lat": 27.92,
-    "lng": 34.33
+    "lng": 34.33,
+    "flightCostUsd": 300,
+    "dailyCostUsd": 100
   },
   {
     "city": "Cape Town",
@@ -231,7 +287,9 @@
     "countryCode": "ZA",
     "continent": "Africa",
     "lat": -33.92,
-    "lng": 18.42
+    "lng": 18.42,
+    "flightCostUsd": 1100,
+    "dailyCostUsd": 120
   },
   {
     "city": "Zanzibar",
@@ -239,7 +297,9 @@
     "countryCode": "TZ",
     "continent": "Africa",
     "lat": -6.16,
-    "lng": 39.19
+    "lng": 39.19,
+    "flightCostUsd": 800,
+    "dailyCostUsd": 110
   },
   {
     "city": "Port Louis",
@@ -247,7 +307,9 @@
     "countryCode": "MU",
     "continent": "Africa",
     "lat": -20.16,
-    "lng": 57.50
+    "lng": 57.50,
+    "flightCostUsd": 1200,
+    "dailyCostUsd": 160
   },
 
   {
@@ -256,7 +318,9 @@
     "countryCode": "US",
     "continent": "North America",
     "lat": 40.71,
-    "lng": -74.01
+    "lng": -74.01,
+    "flightCostUsd": 1000,
+    "dailyCostUsd": 280
   },
   {
     "city": "Miami",
@@ -264,7 +328,9 @@
     "countryCode": "US",
     "continent": "North America",
     "lat": 25.76,
-    "lng": -80.19
+    "lng": -80.19,
+    "flightCostUsd": 1100,
+    "dailyCostUsd": 230
   },
   {
     "city": "Vancouver",
@@ -272,7 +338,9 @@
     "countryCode": "CA",
     "continent": "North America",
     "lat": 49.28,
-    "lng": -123.12
+    "lng": -123.12,
+    "flightCostUsd": 1300,
+    "dailyCostUsd": 220
   },
   {
     "city": "Cancun",
@@ -280,7 +348,9 @@
     "countryCode": "MX",
     "continent": "North America",
     "lat": 21.16,
-    "lng": -86.85
+    "lng": -86.85,
+    "flightCostUsd": 1300,
+    "dailyCostUsd": 180
   },
   {
     "city": "Punta Cana",
@@ -288,7 +358,9 @@
     "countryCode": "DO",
     "continent": "North America",
     "lat": 18.58,
-    "lng": -68.40
+    "lng": -68.40,
+    "flightCostUsd": 1400,
+    "dailyCostUsd": 170
   },
 
   {
@@ -297,7 +369,9 @@
     "countryCode": "BR",
     "continent": "South America",
     "lat": -22.91,
-    "lng": -43.17
+    "lng": -43.17,
+    "flightCostUsd": 1500,
+    "dailyCostUsd": 120
   },
   {
     "city": "Buenos Aires",
@@ -305,7 +379,9 @@
     "countryCode": "AR",
     "continent": "South America",
     "lat": -34.60,
-    "lng": -58.38
+    "lng": -58.38,
+    "flightCostUsd": 1600,
+    "dailyCostUsd": 110
   },
   {
     "city": "Cusco",
@@ -313,7 +389,9 @@
     "countryCode": "PE",
     "continent": "South America",
     "lat": -13.53,
-    "lng": -71.97
+    "lng": -71.97,
+    "flightCostUsd": 1700,
+    "dailyCostUsd": 90
   },
   {
     "city": "Cartagena",
@@ -321,7 +399,9 @@
     "countryCode": "CO",
     "continent": "South America",
     "lat": 10.39,
-    "lng": -75.48
+    "lng": -75.48,
+    "flightCostUsd": 1500,
+    "dailyCostUsd": 110
   },
 
   {
@@ -330,7 +410,9 @@
     "countryCode": "AU",
     "continent": "Oceania",
     "lat": -33.87,
-    "lng": 151.21
+    "lng": 151.21,
+    "flightCostUsd": 1800,
+    "dailyCostUsd": 200
   },
   {
     "city": "Auckland",
@@ -338,7 +420,9 @@
     "countryCode": "NZ",
     "continent": "Oceania",
     "lat": -36.85,
-    "lng": 174.76
+    "lng": 174.76,
+    "flightCostUsd": 2000,
+    "dailyCostUsd": 180
   },
   {
     "city": "Nadi",
@@ -346,6 +430,8 @@
     "countryCode": "FJ",
     "continent": "Oceania",
     "lat": -17.80,
-    "lng": 177.42
+    "lng": 177.42,
+    "flightCostUsd": 2000,
+    "dailyCostUsd": 160
   }
 ]
