@@ -16,6 +16,8 @@
             ArgumentException.ThrowIfNullOrWhiteSpace(country);
             ArgumentException.ThrowIfNullOrWhiteSpace(countryCode);
             ArgumentException.ThrowIfNullOrWhiteSpace(continent);
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(flightCostUsd);
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(dailyCostUsd);
 
             string cleanCode = countryCode.Trim().ToUpperInvariant();
             if (cleanCode.Length != 2) throw new ArgumentException("Country code must be 2 letters like ES.", nameof(countryCode));
@@ -38,6 +40,8 @@
             // if user choose to enter both, country and continent then the pref is on country.
             // if both clean (null) then its gonna be around the world options, not tight on country or continent.
 
+            this.FlightCostUsd = flightCostUsd;
+            this.DailyCostUsd = dailyCostUsd;
             this.CityName = cityName;
             this.Latitude = latitude;
             this.Longitude = longitude;
