@@ -28,10 +28,10 @@
             if (tempWeight == 0 && priceWeight == 0)
             {
                 tempWeight = 0.4;
-                priceWeight = 0.6; // in my opinion the price is the factor of choice, so a higher weight for that one.
+                priceWeight = 0.6; // in my opinion the price is the factor of choice, so a higher weight for that one
             }
             double totalWeight = tempWeight + priceWeight;
-            // Normalize weights so their sum is exactly 1.0 with the same ratio.
+            // Normalize weights so their sum is exactly 1.0 with the same ratio
             double normalizedTempWeight = tempWeight / totalWeight;
             double normalizedPriceWeight = priceWeight / totalWeight;
             return Math.Max(0,(tempScore * normalizedTempWeight) + (priceScore * normalizedPriceWeight));

@@ -20,7 +20,6 @@ public class OpenMeteoClimateProvider : IClimateProvider
 
     public async Task<ClimateInfo> GetClimateAsync(Destination destination, int month, CancellationToken ct = default) // got helped with claude. 
     {
-        // validates the inputs builds the URL calls the API and passes the result on
         ArgumentNullException.ThrowIfNull(destination);
         ArgumentOutOfRangeException.ThrowIfLessThan(month, 1);
         ArgumentOutOfRangeException.ThrowIfGreaterThan(month, 12);
@@ -50,10 +49,8 @@ public class OpenMeteoClimateProvider : IClimateProvider
         int tempCount = 0;
         int rainyDays = 0;
 
-        // The three arrays should be the same length, but external data shouldnt be trusted 
         int length = Math.Min(daily.Time.Length, Math.Min(daily.TemperatureMean.Length, daily.PrecipitationSum.Length));
 
-        // One pass over the data filter by month, sum temperatures, count rainy days
         for (int i = 0; i < length; i++)
         {
             if (daily.Time[i].Month != month)

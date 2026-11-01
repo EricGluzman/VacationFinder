@@ -9,22 +9,21 @@ Console.OutputEncoding = Encoding.UTF8;
 
 UserPreferences prefs = PreferencesPrompt.Ask();
 
-// loading the destinations from your jsn file
+// loading the destinations from jsn file
 string path = Path.Combine(AppContext.BaseDirectory,"Data","destinations.json");
 List<Destination> destinations;
 
 try
 {
     destinations = LoadDestinations(path);
-}
-catch (Exception ex) when (
-    ex is IOException or UnauthorizedAccessException or JsonException)
+} // IOE for missing file, 2 one is premission, json syntax 
+catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or JsonException)
 {
     Console.WriteLine($"Could not load destinations: {ex.Message}");
     return;
 }
 
-// 3. Filter by country or continent.
+// filter by country or cont
 List<Destination> matches = new List<Destination>();
 
 foreach (Destination destination in destinations)
@@ -40,19 +39,19 @@ if (matches.Count == 0)
     return;
 }
 
-// Fixed example rates for the demo; update these manually.
-// Each value is the number of currency units per 1 USD.
+// Fixed example rates for the demo i`ll update those manualy
+// Each value is the number of currency units per 1 usd
 decimal currencyRate = prefs.Currency switch
 {
     "USD" => 1m,
-    "ILS" => 3.70m,
+    "ILS" => 3.20m,
     "EUR" => 0.92m,
     "GBP" => 0.79m,
     _ => throw new ArgumentException("Unsupported currency.")
 };
 
 decimal budgetUsd = prefs.Budget / currencyRate;
-
+// creating http client 
 using var httpClient = new HttpClient
 {
     Timeout = TimeSpan.FromSeconds(30)
@@ -64,14 +63,13 @@ var results = new List<ScoredResult>();
 Console.WriteLine();
 Console.WriteLine("Searching...");
 
-// 4. Check costs, fetch weather, and calculate scores.
+//  Check costs fetch weather and calculate scores
 foreach (Destination destination in matches)
 {
-    decimal costUsd =
-        destination.FlightCostUsd +
-        destination.DailyCostUsd * prefs.Days;
+    decimal costUsd = destination.FlightCostUsd + destination.DailyCostUsd * prefs.Days;
 
-    // Avoid weather requests for destinations over budget.
+    // avoinding requsting the countries or cont that over the budget ( i think i`ll change thath in the future, to even show those
+    // over the budget ones. )
     if (costUsd > budgetUsd)
         continue;
 
@@ -79,50 +77,28 @@ foreach (Destination destination in matches)
 
     try
     {
-        ClimateInfo climate = await climateProvider.GetClimateAsync(
-            destination,
-            prefs.Month);
+        ClimateInfo climate = await climateProvider.GetClimateAsync(destination,prefs.Month);
 
-        double tempScore = Scorer.TemperatureScore(
-            climate.AvgTemp,
-            prefs.MinTemp,
-            prefs.MaxTemp);
+        double tempScore = Scorer.TemperatureScore(climate.AvgTemp,prefs.MinTemp,prefs.MaxTemp);
 
-        double priceScore = Scorer.PriceScore(
-            costUsd,
-            budgetUsd);
+        double priceScore = Scorer.PriceScore(costUsd,budgetUsd);
 
-        // Equal importance: 50% temperature, 50% price.
-        double finalScore = Scorer.FinalScore(
-            tempScore,
-            priceScore,
-            0.5,
-            0.5);
+        double finalScore = Scorer.FinalScore(tempScore,priceScore,0.5,0.5); // for now i`ll leave the weight of cost and temp equal.
 
         decimal costInUserCurrency = costUsd * currencyRate;
 
-        results.Add(new ScoredResult(
-            destination,
-            climate,
-            costInUserCurrency,
-            finalScore));
+        results.Add(new ScoredResult(destination,climate,costInUserCurrency,finalScore));
     }
-    catch (Exception ex) when (
-        ex is HttpRequestException
-        or TaskCanceledException
-        or InvalidOperationException
-        or JsonException)
+    catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException or InvalidOperationException or JsonException)
     {
-        Console.WriteLine(
-            $"Could not check {destination.CityName}: {ex.Message}");
+        Console.WriteLine($"Could not check {destination.CityName}: {ex.Message}");
     }
 }
 
-// 5. Print results, highest score first.
+// Printing results high ones come first
 if (results.Count == 0)
 {
-    Console.WriteLine(
-        "No affordable destinations with available weather data.");
+    Console.WriteLine("No affordable destinations with available weather data.");
     return;
 }
 
@@ -132,11 +108,9 @@ rankedResults.Sort(CompareResults);
 Console.WriteLine();
 Console.WriteLine("Results — estimated costs:");
 Console.WriteLine();
+// with claudes help 
 
-Console.WriteLine(
-    $"{"#",3} {"Country",-22} {"City",-18} " +
-    $"{"Avg °C",8} {"Cost",14} {"Rating",10}");
-
+Console.WriteLine($"{"#",3} {"Country",-22} {"City",-18} " + $"{"Avg °C",8} {"Cost",14} {"Rating",10}");
 Console.WriteLine(new string('-', 82));
 
 int rank = 1;
@@ -152,15 +126,14 @@ foreach (ScoredResult result in rankedResults)
         $"{result.Climate.AvgTemp,8:F1} " +
         $"{cost,14} " +
         $"{result.FinalScore * 10,7:F1}/10");
-
     rank++;
 }
 
-// Reads your existing JSON, including the two price fields.
+//
+
 static List<Destination> LoadDestinations(string path)
 {
-    using JsonDocument document = JsonDocument.Parse(
-        File.ReadAllText(path));
+    using JsonDocument document = JsonDocument.Parse(File.ReadAllText(path));
 
     var destinations = new List<Destination>();
 
@@ -182,35 +155,24 @@ static List<Destination> LoadDestinations(string path)
     return destinations;
 }
 
-// Country takes priority. If neither is selected, include everywhere.
-static bool MatchesLocation(
-    Destination destination,
-    UserPreferences prefs)
+// first choose country if both are null then anywhere 
+static bool MatchesLocation(Destination destination,UserPreferences prefs)
 {
     if (!string.IsNullOrWhiteSpace(prefs.Country))
     {
-        return string.Equals(
-            destination.Country,
-            prefs.Country.Trim(),
-            StringComparison.OrdinalIgnoreCase);
+        return string.Equals(destination.Country,prefs.Country.Trim(), StringComparison.OrdinalIgnoreCase);
     }
 
     if (!string.IsNullOrWhiteSpace(prefs.Continent))
     {
-        return string.Equals(
-            destination.Continent,
-            prefs.Continent.Trim(),
-            StringComparison.OrdinalIgnoreCase);
+        return string.Equals(destination.Continent,prefs.Continent.Trim(), StringComparison.OrdinalIgnoreCase);
     }
-
     return true;
 }
 
-
-
 static int CompareResults(ScoredResult first, ScoredResult second)
 {
-    // Higher scores come first.
+    // Higher scores come first
     int comparison = second.FinalScore.CompareTo(first.FinalScore);
 
     if (comparison != 0)
@@ -218,18 +180,14 @@ static int CompareResults(ScoredResult first, ScoredResult second)
         return comparison;
     }
 
-    // Equal scores: sort alphabetically by country.
-    comparison = string.Compare(
-        first.Destination.Country,
-        second.Destination.Country);
+    // for equal ratings we score by abc
+    comparison = string.Compare(first.Destination.Country,second.Destination.Country);
 
     if (comparison != 0)
     {
         return comparison;
     }
 
-    // Same country and score: sort alphabetically by city.
-    return string.Compare(
-        first.Destination.CityName,
-        second.Destination.CityName);
+    // for same country with same rating we sort by abc for the country
+    return string.Compare(first.Destination.CityName,second.Destination.CityName);
 }
